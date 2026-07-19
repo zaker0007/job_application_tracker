@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Applications</title>
+    <link rel="stylesheet" href="/static/css/view_applications.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">JobTracker</div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/add">Add Application</a></li>
+        <li><a href="/view">View Applications</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
+         <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <h1>View Applications</h1>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Company</th>
+            <th>Role</th>
+
+            <th>Action</th>
+        </tr>
+
+        {% for app_list in applications_list %}
+
+        <tr>
+            <td>{{ app_list[0] }}</td>
+            <td>{{ app_list[1] }}</td>
+            <td>{{ app_list[2] }}</td>
+
+
+
+            <td>
+                <a href="/app_details/{{ app_list[0] }}" class="btn">
+                    View
+                </a>
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+<footer>
+    Job Application Tracker © 2026 | Built with Flask & MySQL
+</footer>
+
+</body>
+</html>

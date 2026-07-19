@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">JobTracker</div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/add">Add Application</a></li>
+        <li><a href="/view">View Applications</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+
+<section class="welcome-section">
+    <h1>Welcome user👋</h1>
+    <h3>Manage and track all your job applications from one place.</h3>
+</section>
+
+<section class="dashboard">
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>{{t}}</h2>
+            <p>Total Applications</p>
+        </div>
+
+        <div class="card">
+            <h2>{{a}}</h2>
+            <p>Applied</p>
+        </div>
+
+        <div class="card">
+            <h2>{{i}}</h2>
+            <p>Interview</p>
+        </div>
+
+        <div class="card">
+            <h2>{{s}}</h2>
+            <p>Selected</p>
+        </div>
+
+        <div class="card">
+            <h2>{{r}}</h2>
+            <p>Rejected</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="quick-actions">
+
+    <h2>Quick Actions</h2>
+
+    <div class="action-buttons">
+        <a href="/add" class="btn">+ Add Application</a>
+        <a href="/view" class="btn">View Applications</a>
+    </div>
+
+</section>
+
+<footer>
+    Job Application Tracker © 2026 | Built with Flask & MySQL
+</footer>
+
+</body>
+</html>

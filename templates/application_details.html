@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Profile</title>
+
+    <link rel="stylesheet"
+          href="/static/css/application_details.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">JobTracker</div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/add">Add Application</a></li>
+        <li><a href="/view">View Applications</a></li>
+         <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+
+<section class="form-section">
+
+    <div class="form-card">
+
+        <h1>Application Profile</h1>
+
+        <form action="/update_application" method="POST">
+
+            {% for n in app_list %}
+
+            <input type="number"
+                   name="id"
+                   value="{{n[0]}}"
+                   readonly>
+
+            <input type="text"
+                   name="company_name"
+                   value="{{n[1]}}">
+
+            <input type="text"
+                   name="job_role"
+                   value="{{n[2]}}">
+
+
+
+            <select name="status">
+
+                <option value="Applied"
+                {% if n[3]=='Applied' %}selected{% endif %}>
+                Applied
+                </option>
+
+                <option value="Interview"
+                {% if n[3]=='Interview' %}selected{% endif %}>
+                Interview
+                </option>
+
+                <option value="Selected"
+                {% if n[3]=='Selected' %}selected{% endif %}>
+                Selected
+                </option>
+
+                <option value="Rejected"
+                {% if n[3]=='Rejected' %}selected{% endif %}>
+                Rejected
+                </option>
+
+            </select>
+
+            <input type="date"
+                   name="applied_date"
+                   value="{{n[4]}}">
+
+            <div class="action-buttons">
+
+                <button type="submit" class="save-btn">
+                    Update Application
+                </button>
+
+                <a href="/delete_application?id={{n[0]}}"
+                   class="delete-btn">
+                    Delete
+                </a>
+
+                <a href="/view"
+                   class="back-btn">
+                    Back
+                </a>
+
+            </div>
+
+            {% endfor %}
+
+        </form>
+
+    </div>
+
+</section>
+
+<footer >
+    Job Application Tracker © 2026 | Built with Flask & MySQL
+</footer>
+
+</body>
+</html>
