@@ -4,8 +4,9 @@ from flask import Flask, render_template, request, flash,redirect, url_for, sess
 from flask_mysqldb import MySQL
 from dotenv import load_dotenv
 import os
+from pathlib import Path
 
-load_dotenv()
+load_dotenv((Path(__file__).parent / '.env'))
 
 app = Flask(__name__)
 
