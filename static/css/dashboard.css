@@ -11,7 +11,7 @@ body{
 }
 
 nav{
-    background:#0b2c5f;
+    background:#0f172a;
     color:white;
     padding:18px 50px;
     display:flex;
@@ -127,5 +127,58 @@ footer{
     color:white;
     text-align:center;
     padding:15px;
-    margin-top:180px;
+    margin-top:80px;
+}
+
+@media (max-width: 768px){
+    nav{
+        padding:16px 24px;
+        flex-wrap:wrap;
+        gap:14px;
+    }
+
+    nav ul{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px 20px;
+    }
+
+    .welcome-section{
+        padding:38px 20px 24px;
+    }
+
+    .welcome-section h3{
+        margin-top:24px;
+        font-size:16px;
+    }
+
+    .dashboard,
+    .quick-actions{
+        width:min(92%, 900px);
+    }
+}
+
+@media (max-width: 480px){
+    nav{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+        gap:16px;
+    }
+
+    .card{
+        padding:24px 18px;
+    }
+
+    footer{
+        font-size:14px;
+    }
 }

@@ -126,3 +126,66 @@ footer{
     text-align:center;
     padding:20px;
 }
+
+@media (max-width: 768px){
+    nav{
+        padding:16px 24px;
+        flex-wrap:wrap;
+        gap:14px;
+    }
+
+    nav ul{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px 20px;
+    }
+
+    nav ul li{
+        margin-left:0;
+    }
+
+    .hero{
+        padding:80px 20px;
+    }
+
+    .hero h1{
+        font-size:clamp(38px, 9vw, 52px);
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .card{
+        width:min(100%, 420px);
+    }
+}
+
+@media (max-width: 480px){
+    nav{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .hero{
+        padding:60px 16px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    footer{
+        padding:16px;
+        font-size:14px;
+    }
+}

@@ -91,5 +91,58 @@ footer{
     color:white;
     text-align:center;
     padding:15px;
-    margin-top:370px;
+    margin-top:80px;
+}
+
+@media (max-width: 768px){
+    nav{
+        padding:16px 24px;
+        flex-wrap:wrap;
+        gap:14px;
+    }
+
+    nav ul{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px 20px;
+    }
+
+    nav ul li{
+        margin-left:0;
+    }
+
+    .container{
+        width:min(94%, 900px);
+        margin:32px auto;
+    }
+
+    .table-wrapper{
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    table{
+        min-width:560px;
+    }
+}
+
+@media (max-width: 480px){
+    nav{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .container h1{
+        font-size:28px;
+    }
+
+    th,
+    td{
+        padding:11px 10px;
+    }
+
+    footer{
+        font-size:14px;
+    }
 }

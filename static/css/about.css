@@ -10,7 +10,7 @@ body{
 }
 
 nav{
-    background:#0b1b44;
+    background:#0f172a;
     color:white;
     padding:18px 60px;
 
@@ -88,4 +88,52 @@ footer{
     color:white;
     text-align:center;
     padding:15px;
+}
+
+@media (max-width: 768px){
+    nav{
+        padding:16px 24px;
+        flex-wrap:wrap;
+        gap:14px;
+    }
+
+    nav ul{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px 20px;
+    }
+
+    .about-container{
+        width:min(92%, 900px);
+        margin:28px auto;
+    }
+
+    .about-card{
+        padding:28px 24px;
+    }
+}
+
+@media (max-width: 480px){
+    nav{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .about-card{
+        padding:24px 18px;
+    }
+
+    .about-card h1{
+        font-size:28px;
+    }
+
+    .tech-list span{
+        padding:7px 12px;
+        margin:4px 2px;
+    }
+
+    footer{
+        font-size:14px;
+    }
 }

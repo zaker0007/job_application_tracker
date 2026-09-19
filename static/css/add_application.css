@@ -52,7 +52,7 @@ body{
 
 .form-container{
     background:white;
-    width:500px;
+    width:min(500px, calc(100% - 32px));
     padding:40px;
     border-radius:15px;
     box-shadow:0 10px 25px rgba(0,0,0,0.1);
@@ -102,4 +102,39 @@ footer{
     color:white;
     text-align:center;
     padding:15px;
+}
+
+@media (max-width: 768px){
+    .navbar{
+        padding:16px 24px;
+        flex-wrap:wrap;
+        gap:14px;
+    }
+
+    .nav-links{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px 20px;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:48px 0;
+    }
+}
+
+@media (max-width: 480px){
+    .navbar{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .form-container{
+        padding:28px 20px;
+    }
+
+    footer{
+        font-size:14px;
+    }
 }
